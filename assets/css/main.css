@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f7f7f4;
+  --paper-2: #efeee9;
+  --ink: #15140f;
+  --grey: #64635e;
+  --faint: #ababa7;
+  --edge: #8f8e88;
+  --pink: #f81a86;
+  --pink-deep: #bc1560;
+  --spring-ui: linear(0, .1176, .3457, .5719, .7511, .8746, .9503, .9911, 1.0095, 1.015, 1.0141, 1.0109, 1.0074, 1.0044, 1.0023, 1.001, 1.0003, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121210;
+    --paper-2: #1c1c19;
+    --ink: #f7f7f4;
+    --grey: #a3a29c;
+    --edge: #4a4944;
+  }
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
